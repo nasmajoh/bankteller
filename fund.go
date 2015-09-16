@@ -2,7 +2,7 @@ package funding
 
 // Fund holding a balance
 type Fund struct {
-	//unexported ie private variable
+	//unexported ie. private variable
 	balance int
 }
 

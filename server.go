@@ -20,13 +20,13 @@ type BalanceCommand struct {
 
 //NewFundServer creates new FundServer
 func NewFundServer(initialBalance int) *FundServer {
-	server := &FundServer{
+	server := FundServer{
 		//make() creates builtnis like channels, maps and slices
 		Commands: make(chan interface{}),
 		fund:     *Newfund(initialBalance),
 	}
 	go server.loop()
-	return server
+	return &server
 }
 
 func (s *FundServer) loop() {
